@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundhompeage"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Profile"
+            android:textSize="25dp"
+            android:textColor="#000000">
+
+        </TextView>
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_margin="35dp"
+        android:layout_height="match_parent"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp">
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp" />
+
+<TextView
+    android:id="@+id/usernameText"
+    android:layout_below="@id/profile_picture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="30dp"
+    android:text="Username">
+
+</TextView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/usernameCard"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/usernameText"
+    android:layout_height="50dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginBottom="30dp"
+    app:cardBackgroundColor="#D9D9D9"
+    app:cardCornerRadius="16dp"
+    >
+    <TextView
+        android:id="@+id/profileUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center">
+    </TextView>
+</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_below="@+id/usernameCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Email">
+
+    </TextView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usernameEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/emailText"
+        app:cardBackgroundColor="#D9D9D9"
+        app:cardCornerRadius="16dp"
+        >
+    <TextView
+        android:id="@+id/profileEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/phoneText"
+        android:layout_below="@+id/usernameEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Phone Number">
+
+    </TextView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/phoneText"
+        app:cardBackgroundColor="#D9D9D9"
+        app:cardCornerRadius="16dp"
+        >
+
+    <TextView
+        android:id="@+id/profilePhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PhoneNumber"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <GridLayout
+        android:id="@+id/gridlayoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardPhone"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEditProf"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:text="Edit"
+            android:textColor="#000000" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInviteFriend"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:layout_columnWeight="1"
+            android:text="Invite"
+            android:textColor="#000000" />
+    </GridLayout>
+    </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>
